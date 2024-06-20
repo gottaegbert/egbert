@@ -93,6 +93,8 @@ const IndexPage: React.FC<Props> = ({ data }) => {
     ndaDisclaimer,
   } = data;
   const [isLoading, setIsLoading] = useState(true);
+  const [showPreloader, setShowPreloader] = useState(true);
+
   useEffect(() => {
     
     const locomotiveScroll = createLocomotive();
@@ -143,8 +145,9 @@ const IndexPage: React.FC<Props> = ({ data }) => {
       <Layout>
 
         <BasicMeta url={"/"} />
-      <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
+      {/* <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence> */}
       
+<AnimatePresence mode="wait">{showPreloader && <Preloader setShowPreloader={setShowPreloader} />}</AnimatePresence>
         <Intro>
         </Intro>
         
