@@ -44,7 +44,7 @@ export function Intro(props) {
           </h1>
           <h2 className={styles.subTitle}>
             <span className={styles.offset}>
-              <span className={"hero-text-line"}>IXD-</span>
+              <span className={"hero-text-line"}>UXE-</span>
               <div data-char="DESIGNER" className={"hero-text-line"}>DEVELOPER</div>
             </span>
             
