@@ -16,15 +16,17 @@ selectedProjects:
       - Raspberry Pi 
       - Python
       - Image to sound 
-      - User Experience
       - Interaction
       - Hardware
   - title: Moving Olympics
     slug: /projects/movingolimipic
     tags:
-      - Motion capture
+      - Motion Capture
       - Unity
       - VFX
+      - Data Visualization
+      - AI
+      - AR
     image: assets/images/HSY-Portfolio-Export_Page_40.jpg
   - title: Away from school
     image: assets/images/HSY-Portfolio-Export_Page_32.jpg
@@ -38,10 +40,8 @@ selectedProjects:
     slug: /projects/Knoise
     tags:
       - Smart City
-      - Noise
       - Data Analysis
-      - User Experience
-      - Interaction
+      - Touch Designer
       - Dashboard
   - title: InViso
     image: assets/images/Inviso/s1.png
@@ -50,7 +50,6 @@ selectedProjects:
       - UX
       - AI
       - Data Analysis
-      - British Museum
       - Data Visualization
       - Dashboard
   
@@ -79,7 +78,6 @@ selectedProjects:
       - Emotion
       - Unity Game Development
       - Avatar
-      - Interaction
   - title: AI mirror
     slug: /projects/aimirror
     tags:
@@ -88,7 +86,7 @@ selectedProjects:
       - Data-Visualization
       - ACM
     image: assets/images/HSY-Portfolio-Export_Page_46.jpg
-  - title: If Mondrian had a Mac
+  - title: Mondrian's Mac
     image: assets/images/mondrainmac/1s.jpg
     slug: /projects/Mondrain
     tags:
