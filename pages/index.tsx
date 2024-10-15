@@ -44,7 +44,7 @@ export function Intro(props) {
           </h1>
           <h2 className={styles.subTitle}>
             <span className={styles.offset}>
-              <span className={"hero-text-line"}>IXD-</span>
+              <span className={"hero-text-line"}>UXE-</span>
               <div data-char="DESIGNER" className={"hero-text-line"}>DEVELOPER</div>
             </span>
             
@@ -93,6 +93,8 @@ const IndexPage: React.FC<Props> = ({ data }) => {
     ndaDisclaimer,
   } = data;
   const [isLoading, setIsLoading] = useState(true);
+  const [showPreloader, setShowPreloader] = useState(true);
+
   useEffect(() => {
     
     const locomotiveScroll = createLocomotive();
@@ -143,8 +145,9 @@ const IndexPage: React.FC<Props> = ({ data }) => {
       <Layout>
 
         <BasicMeta url={"/"} />
-      <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
+      {/* <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence> */}
       
+<AnimatePresence mode="wait">{showPreloader && <Preloader setShowPreloader={setShowPreloader} />}</AnimatePresence>
         <Intro>
         </Intro>
         

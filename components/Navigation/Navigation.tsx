@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import * as React from "react";
 import styles from "./Navigation.module.scss";
@@ -48,7 +49,10 @@ const Navigation = () => {
   return (
     <nav className={styles.nav} ref={navigation}>
       <Link legacyBehavior href="/">
-        <a className={cn("nav-el")}>Home</a>
+        {/* <a className={cn("nav-el")}>Home</a> */}
+        <a>
+          <img src="/assets/icons/logo-m2024.svg" className={cn("nav-el")} alt="" />
+       </a>
       </Link>
 
       <div className={styles.switchinfo}>

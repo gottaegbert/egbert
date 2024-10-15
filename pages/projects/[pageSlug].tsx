@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import * as React from "react";
 import styles from "./project.module.scss";
 import cn from "classnames";
@@ -29,6 +30,19 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
   const title = React.createRef<HTMLDivElement>();
   const imgForeground = React.createRef<HTMLDivElement>();
   const isVideo = data.video;
+  const externallink = data.projectlink;
+
+  useEffect(() => {
+    if (externallink) {
+      window.location.href = externallink;
+    }
+  }, [externallink]);
+
+  if (externallink) {
+    return null; // or a loading spinner, or any other placeholder component
+
+  };
+  
   function VIDEO() {
     return <div className={styles.videoContainer}>
       <YouTube videoId={data.video} opts={{ width: "100%", height: "720px" }} />

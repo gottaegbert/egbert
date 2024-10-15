@@ -5,20 +5,21 @@ import { motion } from 'framer-motion';
 
 const preloaderWords: string[] = [
   'Loading🎬',
+
   'Discovering🔭',
-
+  
   'Defining🔍',
-
+  
   'Designing🎨',
- 
+  
   'Prototyping🎱',
- 
+  
   'Testing🧪',
-
+  
   'Developing🚀',
-
+  
 ];
-const Preloader = () => {
+const Preloader = ({setShowPreloader}) => {
   const [index, setIndex] = useState(0); // Index for the array of words
   const [dimension, setDimension] = useState({ width: 0, height: 0 }); // Window dimensions
 
@@ -28,12 +29,15 @@ const Preloader = () => {
 
   useEffect(() => {
     if (index === preloaderWords.length - 1) return;
-    setTimeout(
-      () => {
-        setIndex(index + 1);
-      },
-      index === 0 ? 1000 : 150
-    );
+   setTimeout(
+  () => {
+    setIndex(index + 1);
+    if (index === preloaderWords.length - 2) {
+      setShowPreloader(false);
+    }
+  },
+  index === 0 ? 2000 : 300
+);
   }, [index]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${
