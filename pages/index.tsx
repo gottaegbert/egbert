@@ -21,6 +21,12 @@ import Bananas from "../components/Bannas/Bannas";
 import Preloader from '../components/Preloader';
 import { createLocomotive } from '../utils/locomotive';
 import { AnimatePresence } from "framer-motion";
+import dynamic from 'next/dynamic'
+
+const DynamicComponentWithNoSSR = dynamic(
+  () => import('../components/Bannas/Bannas'),
+  { ssr: false }
+)
 
 export function Intro(props) {
   
@@ -29,7 +35,7 @@ export function Intro(props) {
     
       <div className={styles.threegradient} />
     <div className={styles.three}>
-    <Bananas  />
+    <DynamicComponentWithNoSSR />
       </div> 
        
       <section className={cn("grid")}>
