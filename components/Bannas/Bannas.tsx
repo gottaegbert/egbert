@@ -44,8 +44,8 @@ function Banana({ index, z, speed }) {
     // Make the X position responsive, slowly scroll objects up at the Y, distribute it along the Z
     // dt is the delta, the time between this frame and the previous, we can use it to be independent of the screens refresh rate
     // We cap dt at 0.1 because now it can't accumulate while the user changes the tab, it will simply stop
-    /* @ts-ignore */
     if (dt < 0.1)
+      /* @ts-ignore */
       ref.current.position.set(
         index === 0 ? 0 : data.x * width,
         (data.y += dt * speed),
