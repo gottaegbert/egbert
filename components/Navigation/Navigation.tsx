@@ -1,25 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import * as React from "react";
-import styles from "./Navigation.module.scss";
-import cn from "classnames";
-import { gsap } from "gsap";
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import * as React from 'react';
+import styles from './Navigation.module.scss';
+import cn from 'classnames';
+import { gsap } from 'gsap';
+import { useEffect, useState } from 'react';
 
 const Navigation = () => {
   // add type argument
 
   const navigation = React.createRef<HTMLDivElement>();
   const [darkTheme, setDarkTheme] = useState(undefined);
-  const handleToggle = (event: { target: { checked: any; }; }) => {
+  const handleToggle = (event: { target: { checked: any } }) => {
     setDarkTheme(event.target.checked);
-  }
- 
+  };
+
   useEffect(() => {
     if (darkTheme !== undefined) {
       if (darkTheme) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        window.localStorage.setItem('theme', 'dark')
+        document.documentElement.setAttribute('data-theme', 'dark');
+        window.localStorage.setItem('theme', 'dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
         window.localStorage.setItem('theme', 'light');
@@ -37,11 +37,11 @@ const Navigation = () => {
   }, []);
 
   useEffect(() => {
-    gsap.to(".nav-el", {
+    gsap.to('.nav-el', {
       duration: 1,
       opacity: 1,
       yPercent: 100,
-      ease: "power4",
+      ease: 'power4',
       delay: 0.5,
       stagger: 0.1,
     });
@@ -51,18 +51,20 @@ const Navigation = () => {
       <Link legacyBehavior href="/">
         {/* <a className={cn("nav-el")}>Home</a> */}
         <a>
-          <img src="/assets/icons/logo-m2024.svg" className={cn("nav-el")} alt="" />
-       </a>
+          <img
+            src="/assets/icons/logo-m2024.svg"
+            className={cn('nav-el')}
+            alt=""
+          />
+        </a>
       </Link>
 
       <div className={styles.switchinfo}>
-        <label className={styles.switch}>   
+        <label className={styles.switch}>
           <input type="checkbox" checked={darkTheme} onChange={handleToggle} />
-          <div className={styles.planet}>
-           </div>
+          <div className={styles.planet}></div>
         </label>
       </div>
-    
     </nav>
   );
 };

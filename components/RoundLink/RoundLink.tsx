@@ -1,7 +1,7 @@
-import * as React from "react";
-import styles from "./RoundLink.module.scss";
-import cn from "classnames";
-import Link from "next/link";
+import * as React from 'react';
+import styles from './RoundLink.module.scss';
+import cn from 'classnames';
+import Link from 'next/link';
 
 type Props = {
   label: string;
@@ -19,14 +19,14 @@ const RoundLink: React.FC<Props> = ({
   return (
     <>
       {internal ? (
-        <Link legacyBehavior  href={url}>
-          <a className={cn(styles.roundLink, classname, "round-link")}>
+        <Link legacyBehavior href={url}>
+          <a className={cn(styles.roundLink, classname, 'round-link')}>
             {label}
           </a>
         </Link>
       ) : (
         <a
-          className={cn(styles.roundLink, classname, "round-link")}
+          className={cn(styles.roundLink, classname, 'round-link')}
           target="_blank"
           rel="noreferrer"
           href={url}

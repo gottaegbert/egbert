@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .projWrap {
   text-decoration: none;
@@ -18,7 +18,9 @@
   &:hover .bottom .arrowContainer .arrowBg {
     height: 60px;
     width: 60px;
-    transition: height 150ms ease-out, width 150ms ease-out;
+    transition:
+      height 150ms ease-out,
+      width 150ms ease-out;
   }
 
   article {
@@ -80,21 +82,21 @@
           @media only screen and (min-width: $breakpoint-md) {
             width: unset;
           }
-
-      
         }
 
         .arrowBg {
           background-color: var(--accent-color);
           height: 0;
           width: 0;
-          border-radius:100%;
+          border-radius: 100%;
           position: absolute;
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
           z-index: 0;
-          transition: height 150ms ease-out, width 150ms ease-out;
+          transition:
+            height 150ms ease-out,
+            width 150ms ease-out;
         }
       }
     }

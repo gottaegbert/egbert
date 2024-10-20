@@ -1,10 +1,8 @@
-@import "../styles/variables.scss";
-
-
+@import '../styles/variables.scss';
 
 .heroContainer {
   background-color: var(--off-white);
-  display:flex;
+  display: flex;
   align-items: center;
   width: 100%;
   padding: 170px 0 0 0;
@@ -22,61 +20,62 @@
   }
 }
 
-
-.three{
-
-
+.three {
   position: absolute;
-    z-index: 2;
-    @media only screen and (max-width: $breakpoint-sm) {
-    width:  100vw;
+  z-index: 2;
+  @media only screen and (max-width: $breakpoint-sm) {
+    width: 100vw;
     height: 80vh;
   }
   @media only screen and (min-width: $breakpoint-sm) {
-    width:  100vw;
+    width: 100vw;
     height: 60vh;
   }
   @media only screen and (min-width: $breakpoint-md) {
-     width:  160vw;
+    width: 160vw;
     height: 80vh;
   }
   @media only screen and (min-width: $breakpoint-lg) {
-    width:  160vw;
+    width: 160vw;
     height: 80vh;
   }
   @media only screen and (min-width: $breakpoint-xl) {
-    width:  160vw;
-    height:  80vh;
+    width: 160vw;
+    height: 80vh;
   }
   // background: linear-gradient(to bottom, var(--accent-color) 0%, var(--off-white) 100%);
 }
 
-.threegradient{
+.threegradient {
   position: absolute;
   z-index: 4;
-    @media only screen and (max-width: $breakpoint-sm) {
-    width:  100vw;
+  @media only screen and (max-width: $breakpoint-sm) {
+    width: 100vw;
     height: 80vh;
   }
   @media only screen and (min-width: $breakpoint-sm) {
-    width:  100vw;
+    width: 100vw;
     height: 60vh;
   }
   @media only screen and (min-width: $breakpoint-md) {
-     width:  160vw;
+    width: 160vw;
     height: 80vh;
   }
   @media only screen and (min-width: $breakpoint-lg) {
-    width:  160vw;
+    width: 160vw;
     height: 80vh;
   }
   @media only screen and (min-width: $breakpoint-xl) {
-    width:  160vw;
-    height:  80vh;
+    width: 160vw;
+    height: 80vh;
   }
-  background: linear-gradient(to bottom, var(--off-white) 0%, var(--gradient-color) 50%, var(--off-white) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--off-white) 0%,
+    var(--gradient-color) 50%,
+    var(--off-white) 100%
+  );
 }
-
 
 .name {
   font-size: 20px;
@@ -100,24 +99,24 @@
   }
 }
 
-
 .subTitle {
   position: relative;
   z-index: 1;
   display: flex;
-  
-  overflow: hidden;
-    
-  div::before {
-	            position:absolute;
-	            top:0;
-	            left:0;
-	            content:attr(data-char);
-	            transform:translateY(-103%);}
-  div{
-	            display:inline-block;
-	            letter-spacing:-0.3vw;}
 
+  overflow: hidden;
+
+  div::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: attr(data-char);
+    transform: translateY(-103%);
+  }
+  div {
+    display: inline-block;
+    letter-spacing: -0.3vw;
+  }
 
   span {
     display: flex;
@@ -142,7 +141,6 @@
         margin-left: 168px;
       }
     }
-   
   }
 }
 

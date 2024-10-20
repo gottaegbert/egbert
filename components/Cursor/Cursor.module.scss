@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .cursor {
   width: 40px;
@@ -10,7 +10,10 @@
   left: 50%;
   pointer-events: none;
   z-index: 999;
-  transition: transform 0.8s ease-in-out, all 0.15s, opacity 0.4s;
+  transition:
+    transform 0.8s ease-in-out,
+    all 0.15s,
+    opacity 0.4s;
   transform: translate(-50%, -50%) scale(1);
   border: 1px solid var(--accent-color);
   background-repeat: no-repeat;
@@ -25,12 +28,18 @@
   border: 2px solid var(--accent-color);
   width: 70px;
   height: 70px;
-  transition: transform 0.8s ease, all 0.2s, opacity 0.4s;
+  transition:
+    transform 0.8s ease,
+    all 0.2s,
+    opacity 0.4s;
 }
 
 .cursor_clicked {
   transform: translate(-50%, -50%) scale(0.96);
-  transition: transform 0.2s ease, all 0.15s, opacity 0.4s;
+  transition:
+    transform 0.2s ease,
+    all 0.15s,
+    opacity 0.4s;
 }
 
 .cursor_proj_link_hovered {
@@ -41,7 +50,7 @@
   background-color: var(--black);
 
   &:after {
-    content: "Read more";
+    content: 'Read more';
     position: absolute;
     text-align: center;
     color: var(--arrow);
@@ -54,7 +63,10 @@
 }
 .cursor_round_link_hovered {
   opacity: 0;
-  transition: transform 0.8s ease, all 0.15s, opacity 0.1s;
+  transition:
+    transform 0.8s ease,
+    all 0.15s,
+    opacity 0.1s;
 }
 
 .cursor_work_link_hovered {

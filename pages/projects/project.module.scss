@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .prjTitleContainer {
   display: flex;
@@ -38,10 +38,10 @@
     }
   }
 
-  .videoContainer{   
-    margin:0px;
-    padding:0px;
-    overflow:hidden;
+  .videoContainer {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
     position: relative;
     display: block;
     height: 100%;
