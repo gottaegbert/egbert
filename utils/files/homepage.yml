@@ -1,21 +1,20 @@
-
 aboutShort: UX Engineer with strong design sensibilities and technical know-how. Experience in Human-computer interaction (HCI), Productivity & Creativity supports, Generative AI, Web Development and Game Design. The goal is to structure the digital world in a way that makes it more accessible, meaningful and enjoyable for everyone.
 selectedProjects:
   - title: Subline
     image: assets/images/subline/subline1.png
     slug: /projects/Subline
-    tags: 
-    - Product Service System Design
-    - Public Space
-    - Reading
-    - Subway
+    tags:
+      - Product Service System Design
+      - Public Space
+      - Reading
+      - Subway
   - title: VisEar
     image: assets/images/visear/vis9.jpg
     slug: /projects/visear
     tags:
-      - Raspberry Pi 
+      - Raspberry Pi
       - Python
-      - Image to sound 
+      - Image to sound
       - Interaction
       - Hardware
   - title: Moving Olympics
@@ -52,7 +51,7 @@ selectedProjects:
       - Data Analysis
       - Data Visualization
       - Dashboard
-  
+
   - title: Weibo Trending
     image: assets/images/weibotrend/01.jpg
     slug: /projects/weibotrend
@@ -96,30 +95,31 @@ selectedProjects:
       - Art Installation
       - Unity
 
-
-
 ndaDisclaimer: Designing the digial world! Working on more...
-moreWorksDesc:  Most of them can also be found on my [Github](https://github.com/gottaegbert). 
-                
-                
-                And here you can see some of my [travel photography](https://siyuhu.myportfolio.com/).
+moreWorksDesc: The following showcases both my freelance projects and those developed for companies.
+
 moreWorks:
-  - title: Currently Working at Voiseed
+  - title: ffandesign webiste
+    description: Fully customized design studio webiste with CMS integration
+    url: https://ffandesign.net/
+    image: assets/images/ffan.svg
+
+  - title: Working for Voiseed
     description: Responsible for user experience, interaction design, and developing visual effects for front-end development.
     url: https://www.voiseed.com/
     image: assets/images/voiseed.jpeg
 
   - title: Notion CMS blog website for client
-    description: Implementing Notion api and Three.js for easy organize the web content and write daily blog. 
+    description: Implementing Notion api and Three.js for easy organize the web content and write daily blog.
     url: https://antioch.vercel.app/
     image: assets/images/notionblog.jpeg
+
   - title: 3D element generation on web poster editing tool
-    description: Implementing the three.js library in web canvas and letting users have 3d font effects and another animation element on their recommendation poster. 
+    description: Implementing the three.js library in web canvas and letting users have 3d font effects and another animation element on their recommendation poster.
     url: https://www.nolibox.com/
     image: assets/images/nolipix.jpeg
+
   - title: AI*Design Sharing
     description: Sharing my experience of using AI in design and how to use AI to create a better design.
     url: https://digital-and-interaction-design.framer.ai/
     image: assets/images/aidesign.jpeg
-
-

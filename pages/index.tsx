@@ -190,7 +190,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
         <section className={cn('grid sectionSpacing', styles.moreWorksSection)}>
           <div className={'col-12 col-sm-6 col-md-5'}>
             <StaggeredTitle
-              label1="More"
+              label1="Frontend"
               label2="Works"
               classname={styles.projTitle}
             />
