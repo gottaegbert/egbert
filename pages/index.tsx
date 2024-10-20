@@ -47,7 +47,7 @@ export function Intro(props) {
                 <span className={'hero-text-line'}>Siyu Hu</span>
               </span>
             </h1>
-            <span className={styles.offset}>
+            <span>
               <span className={'hero-text-line'}>UXE-</span>
               <div data-char="DESIGNER" className={'hero-text-line'}>
                 DEVELOPER

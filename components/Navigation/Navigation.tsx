@@ -22,7 +22,7 @@ const Navigation = () => {
         window.localStorage.setItem('theme', 'dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
-        window.localStorage.setItem('theme', 'light');
+        window.localStorage.setItem('theme', 'dark');
       }
     }
   }, [darkTheme]);
