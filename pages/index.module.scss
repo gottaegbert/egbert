@@ -4,20 +4,8 @@
   background-color: var(--off-white);
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 170px 0 0 0;
-  @media only screen and (min-width: $breakpoint-sm) {
-    padding: 200px 0 90px 0;
-  }
-  @media only screen and (min-width: $breakpoint-md) {
-    padding: 280px 0 180px 0;
-  }
-  @media only screen and (min-width: $breakpoint-lg) {
-    padding: 280px 0 180px 0;
-  }
-  @media only screen and (min-width: $breakpoint-xl) {
-    padding: 320px 0 220px 0;
-  }
+  width: 100vw;
+  height: 100vh;
 }
 
 .three {
@@ -103,7 +91,7 @@
   position: relative;
   z-index: 1;
   display: flex;
-
+  justify-content: center;
   overflow: hidden;
 
   div::before {

@@ -17,7 +17,6 @@ import { gePageData } from '../utils/pages';
 import { StoreProvider } from '../utils/StoreProvider';
 import BasicMeta from '../utils/BasicMeta';
 import { homePageData } from '../utils/customTypes';
-import Bananas from '../components/Bannas/Bannas';
 import Preloader from '../components/Preloader';
 import { createLocomotive } from '../utils/locomotive';
 import { AnimatePresence } from 'framer-motion';
@@ -42,12 +41,12 @@ export function Intro(props) {
             'col-12 col-start-md-2 col-end-md-11 col-start-lg-2 col-end-lg-11'
           )}
         >
-          <h1 className={styles.name}>
-            <span>
-              <span className={'hero-text-line'}>Siyu Hu</span>
-            </span>
-          </h1>
           <h2 className={styles.subTitle}>
+            <h1 className={styles.name}>
+              <span>
+                <span className={'hero-text-line'}>Siyu Hu</span>
+              </span>
+            </h1>
             <span className={styles.offset}>
               <span className={'hero-text-line'}>UXE-</span>
               <div data-char="DESIGNER" className={'hero-text-line'}>
