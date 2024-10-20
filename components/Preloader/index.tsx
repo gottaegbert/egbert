@@ -7,19 +7,18 @@ const preloaderWords: string[] = [
   'Loading🎬',
 
   'Discovering🔭',
-  
+
   'Defining🔍',
-  
+
   'Designing🎨',
-  
+
   'Prototyping🎱',
-  
+
   'Testing🧪',
-  
+
   'Developing🚀',
-  
 ];
-const Preloader = ({setShowPreloader}) => {
+const Preloader = ({ setShowPreloader }) => {
   const [index, setIndex] = useState(0); // Index for the array of words
   const [dimension, setDimension] = useState({ width: 0, height: 0 }); // Window dimensions
 
@@ -29,15 +28,15 @@ const Preloader = ({setShowPreloader}) => {
 
   useEffect(() => {
     if (index === preloaderWords.length - 1) return;
-   setTimeout(
-  () => {
-    setIndex(index + 1);
-    if (index === preloaderWords.length - 2) {
-      setShowPreloader(false);
-    }
-  },
-  index === 0 ? 2000 : 300
-);
+    setTimeout(
+      () => {
+        setIndex(index + 1);
+        if (index === preloaderWords.length - 2) {
+          setShowPreloader(false);
+        }
+      },
+      index === 0 ? 2000 : 300
+    );
   }, [index]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${
@@ -50,23 +49,32 @@ const Preloader = ({setShowPreloader}) => {
   const curve = {
     initial: {
       d: initialPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] }
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
     },
     exit: {
       d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 }
-    }
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
+    },
   };
 
   return (
-    <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
+    <motion.div
+      variants={slideUp}
+      initial="initial"
+      exit="exit"
+      className={styles.introduction}
+    >
       {dimension.width > 0 && (
         <>
           <motion.p variants={opacity} initial="initial" animate="animate">
             {preloaderWords[index]}
           </motion.p>
           <svg>
-            <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+            <motion.path
+              variants={curve}
+              initial="initial"
+              exit="exit"
+            ></motion.path>
           </svg>
         </>
       )}

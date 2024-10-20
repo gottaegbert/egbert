@@ -1,21 +1,21 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import * as React from "react";
-import styles from "./project.module.scss";
-import cn from "classnames";
+import * as React from 'react';
+import styles from './project.module.scss';
+import cn from 'classnames';
 
-import { gsap } from "gsap";
-import { useEffect } from "react";
-import { GetStaticPaths, GetStaticProps } from "next";
-import Layout from "../../components/Layout/Layout";
-import StaggeredTitle from "../../components/StaggeredTitle/StaggeredTitle";
-import Work from "../../components/Work/Work";
-import ReactMarkdown from "react-markdown";
-import Cursor from "../../components/Cursor/Cursor";
-import { StoreProvider } from "../../utils/StoreProvider";
-import { gePageData } from "../../utils/pages";
-import BasicMeta from "../../utils/BasicMeta";
-import { project, selectedProject } from "../../utils/customTypes";
-import Image from "next/legacy/image";
+import { gsap } from 'gsap';
+import { useEffect } from 'react';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import Layout from '../../components/Layout/Layout';
+import StaggeredTitle from '../../components/StaggeredTitle/StaggeredTitle';
+import Work from '../../components/Work/Work';
+import ReactMarkdown from 'react-markdown';
+import Cursor from '../../components/Cursor/Cursor';
+import { StoreProvider } from '../../utils/StoreProvider';
+import { gePageData } from '../../utils/pages';
+import BasicMeta from '../../utils/BasicMeta';
+import { project, selectedProject } from '../../utils/customTypes';
+import Image from 'next/legacy/image';
 import YouTube from 'react-youtube';
 
 type Props = {
@@ -23,8 +23,6 @@ type Props = {
   moreProjs: selectedProject[];
   slug: string;
 };
-
-
 
 const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
   const title = React.createRef<HTMLDivElement>();
@@ -40,43 +38,49 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
 
   if (externallink) {
     return null; // or a loading spinner, or any other placeholder component
+  }
 
-  };
-  
   function VIDEO() {
-    return <div className={styles.videoContainer}>
-      <YouTube videoId={data.video} opts={{ width: "100%", height: "720px" }} />
-    </div>
+    return (
+      <div className={styles.videoContainer}>
+        <YouTube
+          videoId={data.video}
+          opts={{ width: '100%', height: '720px' }}
+        />
+      </div>
+    );
   }
   function Picture() {
-    return <div className={styles.imageContainer}>
-      <Image
-        src={`/${data.image}`}
-        alt={data.title}
-        layout="responsive"
-        height={9}
-        width={16}
-        objectFit="contain"
-        className={styles.projImage}
-      />
-      <div ref={imgForeground} className={styles.imgForeground}></div>
-    </div>
+    return (
+      <div className={styles.imageContainer}>
+        <Image
+          src={`/${data.image}`}
+          alt={data.title}
+          layout="responsive"
+          height={9}
+          width={16}
+          objectFit="contain"
+          className={styles.projImage}
+        />
+        <div ref={imgForeground} className={styles.imgForeground}></div>
+      </div>
+    );
   }
-  
-  const headerComponent = isVideo ? <VIDEO/>:<Picture /> 
+
+  const headerComponent = isVideo ? <VIDEO /> : <Picture />;
   useEffect(() => {
-    gsap.set(title.current, { opacity: 1, yPercent:100});
+    gsap.set(title.current, { opacity: 1, yPercent: 100 });
     gsap.to(title.current, {
       duration: 1,
       yPercent: 0,
-      ease: "power4",
+      ease: 'power4',
       stagger: 0.1,
       delay: 0.2,
     });
     gsap.to(imgForeground.current, {
       duration: 1,
       width: 0,
-      ease: "power4",
+      ease: 'power4',
       stagger: 0.2,
       delay: 0.2,
     });
@@ -86,7 +90,7 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
     <StoreProvider>
       <Layout>
         <BasicMeta url={slug} />
-        <section className={cn("grid", styles.prjTitleSection)}>
+        <section className={cn('grid', styles.prjTitleSection)}>
           <div className={styles.prjTitleContainer}>
             <h1 className={styles.title}>
               <span>
@@ -95,28 +99,27 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
                 </span>
               </span>
             </h1>
-
           </div>
           {headerComponent}
-          <div className={cn("col-12", "description")}>
+          <div className={cn('col-12', 'description')}>
             <ReactMarkdown className="fade-in-up">
               {data.description}
             </ReactMarkdown>
           </div>
           {/* date and link 4 category */}
           <div
-            className={cn("grid no-pad fade-in-up", styles.bottomTitleSection)}
+            className={cn('grid no-pad fade-in-up', styles.bottomTitleSection)}
           >
-            <div className={"col-6 col-sm-4 col-lg-3"}>
-              <p className={cn("small ", styles.label)}>Client</p>
+            <div className={'col-6 col-sm-4 col-lg-3'}>
+              <p className={cn('small ', styles.label)}>Client</p>
               <p className={styles.keyFact}>{data.company}</p>
             </div>
             {/* <div className={"col-6 col-sm-4 col-lg-3"}>
               <p className={cn("small", styles.label)}>Project date</p>
               <p className={styles.keyFact}>{data.date}</p>
             </div> */}
-            <div className={"col-6 col-sm-4 col-lg-3"}>
-              <p className={cn("small", styles.label)}>Project/Process Link</p>
+            <div className={'col-6 col-sm-4 col-lg-3'}>
+              <p className={cn('small', styles.label)}>Project/Process Link</p>
               <p className={styles.keyFact}>
                 <a href={data.link} rel="noreferrer" target="_blank">
                   <img src="/assets/icons/link.svg" alt="" />
@@ -124,8 +127,8 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               </p>
             </div>
 
-            <div className={"col-6 col-sm-4 col-lg-3"}>
-              <p className={cn("small", styles.label)}>Prototype/Demo Link</p>
+            <div className={'col-6 col-sm-4 col-lg-3'}>
+              <p className={cn('small', styles.label)}>Prototype/Demo Link</p>
               <p className={styles.keyFact}>
                 <a href={data.prototypeLink} rel="noreferrer" target="_blank">
                   <img src="/assets/icons/link.svg" alt="" />
@@ -133,8 +136,8 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               </p>
             </div>
             {data.github && (
-              <div className={"col-6 col-sm-4 col-lg-3"}>
-                <p className={cn("small", styles.label)}>Code</p>
+              <div className={'col-6 col-sm-4 col-lg-3'}>
+                <p className={cn('small', styles.label)}>Code</p>
                 <p className={styles.keyFact}>
                   <a href={data.github} rel="noreferrer" target="_blank">
                     <img src="/assets/icons/github.svg" alt="" />
@@ -143,21 +146,19 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               </div>
             )}
           </div>
-
         </section>
         <section
-          className={cn("grid sectionSpacing", styles.projDetailsSection)}
+          className={cn('grid sectionSpacing', styles.projDetailsSection)}
         >
-          
           {data.textBlock.map((block, idx) => (
             <React.Fragment key={idx}>
               <div
-                className={cn("col-12 col-md-3 col-lg-4", styles.detailLabel)}
+                className={cn('col-12 col-md-3 col-lg-4', styles.detailLabel)}
               >
                 <h5 className="fade-in-up">{block.category}</h5>
               </div>
               <div
-                className={cn("col-12 col-md-9 col-lg-8", styles.detailBody)}
+                className={cn('col-12 col-md-9 col-lg-8', styles.detailBody)}
               >
                 <ReactMarkdown className="fade-in-up">
                   {block.body}
@@ -168,17 +169,17 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
           {data.stack && (
             <>
               <div
-                className={cn("col-12 col-md-3 col-lg-4", styles.detailLabel)}
+                className={cn('col-12 col-md-3 col-lg-4', styles.detailLabel)}
               >
                 <h5 className="fade-in-up">Stack</h5>
               </div>
               <div
-                className={cn("col-12 col-md-9 col-lg-8", styles.skillsGrid)}
+                className={cn('col-12 col-md-9 col-lg-8', styles.skillsGrid)}
               >
                 {data.stack.map((tool, idx: number) => (
                   <div
-                    className={cn(styles.skillsCell, "fade-in-up")}
-                    key={"stack" + idx}
+                    className={cn(styles.skillsCell, 'fade-in-up')}
+                    key={'stack' + idx}
                   >
                     <p>{tool}</p>
                   </div>
@@ -189,17 +190,14 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
           {/* content */}
           {data.imageContent && (
             <>
-              <div
-                className={cn( styles.detailLabel)}
-              >
+              <div className={cn(styles.detailLabel)}>
                 <h5 className="fade-in-up">Content</h5>
               </div>
-              <div
-                className={styles.imageContainer}>
+              <div className={styles.imageContainer}>
                 {data.imageContent.map((content, idx: number) => (
                   <div
-                    className={cn(styles.skillsCell, "fade-in-up")}
-                    key={"stack" + idx}
+                    className={cn(styles.skillsCell, 'fade-in-up')}
+                    key={'stack' + idx}
                   >
                     <Image
                       src={`/${content}`}
@@ -214,27 +212,24 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
                       className={styles.projImage}
                     />
                   </div>
-
-
                 ))}
               </div>
             </>
           )}
 
-
-          <div className={cn("col-12", styles.divider)}></div>
+          <div className={cn('col-12', styles.divider)}></div>
         </section>
-        <section className={cn("grid sectionSpacing", styles.moreWorksSection)}>
-          <div className={"col-12 col-sm-6 col-md-5"}>
+        <section className={cn('grid sectionSpacing', styles.moreWorksSection)}>
+          <div className={'col-12 col-sm-6 col-md-5'}>
             <StaggeredTitle
               label1="More"
               label2="Projects"
               classname={styles.projTitle}
             />
           </div>
-          <div className={"col-12 col-sm-6 col-md-7"}>
+          <div className={'col-12 col-sm-6 col-md-7'}>
             {moreProjs.map((work, idx: number) => (
-              <Work {...work} key={"work" + idx} />
+              <Work {...work} key={'work' + idx} />
             ))}
           </div>
         </section>
@@ -247,12 +242,12 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
 export default ProjectPage;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const data = await gePageData("projects").projects.filter(
+  const data = await gePageData('projects').projects.filter(
     // @ts-ignore
     (el: project) => el.slug.toLowerCase() == params?.pageSlug?.toLowerCase()
   )[0];
 
-  const homeData = await gePageData("homepage");
+  const homeData = await gePageData('homepage');
   const selectedPjs = homeData.selectedProjects.filter(
     (el: selectedProject) => el.slug !== `/projects/${params?.pageSlug}`
   );
@@ -270,9 +265,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = await gePageData("homepage")
+  const slugs = await gePageData('homepage')
     .selectedProjects.map((pj: selectedProject) => pj.slug)
-    .map((el: string) => el.split("/")[2]);
+    .map((el: string) => el.split('/')[2]);
   return {
     paths: slugs.map((el: string) => {
       return { params: { pageSlug: el } };

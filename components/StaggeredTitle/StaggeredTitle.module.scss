@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .title {
   position: relative;
@@ -13,7 +13,7 @@
 
 .offset {
   &:before {
-    content: " ";
+    content: ' ';
     @media only screen and (min-width: $breakpoint-sm) {
       display: none;
     }

@@ -5,23 +5,23 @@ module.exports = {
     forceSwcTransforms: true,
   },
   i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+    locales: ['en'],
+    defaultLocale: 'en',
   },
   images: {
-    formats: ['image/avif', 'image/webp']
+    formats: ['image/avif', 'image/webp'],
   },
   webpack: (config) => {
     config.module.rules.push(
       ...[
         {
           test: /\.yml$/,
-          type: "json",
-          use: "yaml-loader",
+          type: 'json',
+          use: 'yaml-loader',
         },
         {
           test: /\.svg$/,
-          use: "@svgr/webpack",
+          use: '@svgr/webpack',
         },
       ]
     );

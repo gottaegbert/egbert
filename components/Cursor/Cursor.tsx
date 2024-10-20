@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import styles from "./Cursor.module.scss";
-import cn from "classnames";
-import React, { useContext } from "react";
-import { Context } from "../../utils/StoreProvider";
+import { useEffect, useState } from 'react';
+import styles from './Cursor.module.scss';
+import cn from 'classnames';
+import React, { useContext } from 'react';
+import { Context } from '../../utils/StoreProvider';
 type Props = {
   imgArray?: string[];
 };
@@ -28,17 +28,17 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
   const [activeIdx, setActiveIdx] = useState(-1);
 
   const addEventListeners = () => {
-    document.addEventListener("mouseenter", onMouseEnter);
-    document.addEventListener("mouseleave", onMouseLeave);
-    document.addEventListener("mousedown", onMouseDown);
-    document.addEventListener("mouseup", onMouseUp);
+    document.addEventListener('mouseenter', onMouseEnter);
+    document.addEventListener('mouseleave', onMouseLeave);
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('mouseup', onMouseUp);
   };
 
   const removeEventListeners = () => {
-    document.removeEventListener("mouseenter", onMouseEnter);
-    document.removeEventListener("mouseleave", onMouseLeave);
-    document.removeEventListener("mousedown", onMouseDown);
-    document.removeEventListener("mouseup", onMouseUp);
+    document.removeEventListener('mouseenter', onMouseEnter);
+    document.removeEventListener('mouseleave', onMouseLeave);
+    document.removeEventListener('mousedown', onMouseDown);
+    document.removeEventListener('mouseup', onMouseUp);
   };
 
   const onMouseDown = () => {
@@ -59,46 +59,46 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
 
   const handleLinkHoverEvents = () => {
     // Project Links
-    const projs = document.getElementsByClassName("selected-pj-img");
+    const projs = document.getElementsByClassName('selected-pj-img');
     Array.from(projs).forEach((proj) => {
-      proj.addEventListener("mouseover", () => {
+      proj.addEventListener('mouseover', () => {
         setProjLinkHovered(true);
       });
-      proj.addEventListener("mouseout", () => {
+      proj.addEventListener('mouseout', () => {
         setProjLinkHovered(false);
       });
     });
 
     // works Links
-    const work = document.getElementsByClassName("work-proj");
+    const work = document.getElementsByClassName('work-proj');
     Array.from(work).forEach((work, idx) => {
-      work.addEventListener("mouseover", () => {
+      work.addEventListener('mouseover', () => {
         setWorkLinkHovered(true);
         setActiveIdx(idx);
       });
-      work.addEventListener("mouseout", () => {
+      work.addEventListener('mouseout', () => {
         setWorkLinkHovered(false);
         setActiveIdx(-1);
       });
     });
 
     // Round Links
-    const roundLinks = document.getElementsByClassName("round-link");
+    const roundLinks = document.getElementsByClassName('round-link');
     Array.from(roundLinks).forEach((link) => {
-      link.addEventListener("mouseover", () => {
+      link.addEventListener('mouseover', () => {
         setRoundLinkHovered(true);
       });
-      link.addEventListener("mouseout", () => {
+      link.addEventListener('mouseout', () => {
         setRoundLinkHovered(false);
       });
     });
 
     // Links
-    document.querySelectorAll("a").forEach((el, idx) => {
-      el.addEventListener("mouseover", () => {
+    document.querySelectorAll('a').forEach((el, idx) => {
+      el.addEventListener('mouseover', () => {
         setLinkHovered(true);
       });
-      el.addEventListener("mouseout", () => setLinkHovered(false));
+      el.addEventListener('mouseout', () => setLinkHovered(false));
     });
   };
 
@@ -110,7 +110,7 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
     [styles.cursor_work_link_hovered]: workLinkHovered,
     [styles.cursor_round_link_hovered]: roundLinkHovered,
   });
-  if (typeof navigator !== "undefined" && isMobile()) return null;
+  if (typeof navigator !== 'undefined' && isMobile()) return null;
 
   return (
     <>
@@ -122,7 +122,7 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
           backgroundImage:
             workLinkHovered && imgArray
               ? `url(../../${imgArray[activeIdx]})`
-              : "none",
+              : 'none',
         }}
       />
     </>

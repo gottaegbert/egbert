@@ -1,9 +1,9 @@
-import * as React from "react";
-import styles from "./FloatingLink.module.scss";
-import cn from "classnames";
+import * as React from 'react';
+import styles from './FloatingLink.module.scss';
+import cn from 'classnames';
 
-import { gsap } from "gsap";
-import { useEffect } from "react";
+import { gsap } from 'gsap';
+import { useEffect } from 'react';
 
 type Props = {
   name: string;
@@ -23,7 +23,7 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
       height: 120,
       width: 120,
 
-      ease: "bounce",
+      ease: 'bounce',
       delay: 0.5 + 0.2 * idx,
     });
     gsap.to(ref.current, {
@@ -31,7 +31,7 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
       width: 80,
       duration: 0.1,
 
-      ease: "bounce",
+      ease: 'bounce',
       delay: 0.6 + 0.2 * idx,
     });
     gsap.to(ref2.current, {
@@ -47,7 +47,7 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
       height: value ? 110 : 80,
       width: value ? 110 : 80,
       duration: 0.05,
-      ease: "bounce",
+      ease: 'bounce',
     });
   };
   return (
@@ -57,7 +57,7 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
       rel="noreferrer"
       className={cn(
         styles.heroLink,
-        "round-link",
+        'round-link',
         styles[`heroLink${idx + 1}`]
       )}
       onMouseEnter={() => hovering(true)}

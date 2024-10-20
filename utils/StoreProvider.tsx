@@ -1,5 +1,5 @@
-import React, { createContext, FC, useEffect } from "react";
-import { useState } from "react";
+import React, { createContext, FC, useEffect } from 'react';
+import { useState } from 'react';
 
 const initialState = {
   mouse: { x: 0, y: 0 },
@@ -11,8 +11,8 @@ export const StoreProvider: FC<any> = ({ children }) => {
   const [mouse, setMouse] = useState(initialState.mouse);
 
   useEffect(() => {
-    document.addEventListener("mousemove", onMouseMove);
-    return () => document.removeEventListener("mousemove", onMouseMove);
+    document.addEventListener('mousemove', onMouseMove);
+    return () => document.removeEventListener('mousemove', onMouseMove);
   }, []);
 
   const onMouseMove = (e: any) => {

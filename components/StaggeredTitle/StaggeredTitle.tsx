@@ -1,9 +1,9 @@
-import * as React from "react";
-import styles from "./StaggeredTitle.module.scss";
-import cn from "classnames";
-import { gsap } from "gsap/dist/gsap";
-import { useEffect } from "react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import * as React from 'react';
+import styles from './StaggeredTitle.module.scss';
+import cn from 'classnames';
+import { gsap } from 'gsap/dist/gsap';
+import { useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 type Props = {
   label1: string;
@@ -17,16 +17,16 @@ const StaggeredTitle: React.FC<Props> = ({ label1, label2, classname }) => {
   const ref2 = React.createRef<HTMLSpanElement>();
 
   useEffect(() => {
-    gsap.set([ref1.current, ref2.current], { opacity: 0, yPercent:100});
+    gsap.set([ref1.current, ref2.current], { opacity: 0, yPercent: 100 });
     gsap.to([ref1.current, ref2.current], {
       scrollTrigger: {
         trigger: ref1.current,
-        start: "top 140%",
+        start: 'top 140%',
       },
       duration: 1.2,
       yPercent: 0,
-      opacity:1,
-      ease: "power4",
+      opacity: 1,
+      ease: 'power4',
       stagger: 0.2,
     });
   }, []);
