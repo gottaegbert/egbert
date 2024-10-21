@@ -3,104 +3,100 @@ selectedProjects:
   - title: Subline
     image: assets/images/subline/subline1.png
     slug: /projects/Subline
+    filter: UX Design
     tags:
-      - Product Service System Design
-      - Public Space
-      - Reading
-      - Subway
+      - 🔄 UX
+      - 🤖 AI
+
   - title: VisEar
     image: assets/images/visear/vis9.jpg
     slug: /projects/visear
+    filter: Product Design
     tags:
-      - Raspberry Pi
-      - Python
-      - Image to sound
-      - Interaction
-      - Hardware
+      - 🐍 Develop
+      - ⚙️ Hardware
+
   - title: Moving Olympics
     slug: /projects/movingolimipic
     tags:
-      - Motion Capture
-      - Unity
-      - VFX
-      - Data Visualization
-      - AI
-      - AR
+      - 🎮 Unity
+      - 📈 Data Visualization
+      - 🤖 AI
+      - 🐍 Develop
+
     image: assets/images/HSY-Portfolio-Export_Page_40.jpg
   - title: Away from school
     image: assets/images/HSY-Portfolio-Export_Page_32.jpg
     slug: /projects/weibo
     tags:
-      - Social Network
-      - Data Scraping
-      - Data Visualization
+      - 🐍 Develop
+      - 🌐 Web Design
+      - 📈 Data Visualization
+
   - title: Knoise
     image: assets/images/knoise/1.png
     slug: /projects/Knoise
+    filter: UX Design
     tags:
-      - Smart City
-      - Data Analysis
-      - Touch Designer
-      - Dashboard
+      - 🔄 UX
+      - 📈 Data Visualization
+      - 🌐 Web Design
+      - ⚙️ Hardware
   - title: InViso
     image: assets/images/Inviso/s1.png
     slug: /projects/InViso
+    filter: UX Design
     tags:
-      - UX
-      - AI
-      - Data Analysis
-      - Data Visualization
-      - Dashboard
-
+      - 🔄 UX
+      - 🐍 Develop
+      - 🤖 AI
+      - 🌐 Web Design
+      - 📈 Data Visualization
   - title: Weibo Trending
     image: assets/images/weibotrend/01.jpg
     slug: /projects/weibotrend
     tags:
-      - Sentiment analysis
-      - Hedonometer
-      - Data Analysis
-      - Scrollytelling
+      - 🐍 Develop
+      - 😢 Emotion
+      - 🌐 Web Design
+      - 📈 Data Visualization
   - title: Tillit
     image: assets/images/trusttillit/01.png
     slug: /projects/tillit
+    filter: UX Design
     tags:
-      - BoardGame
-      - Speculative
-      - Trust
-      - User Experience
-      - Interaction
+      - 🔄 UX
+      - 🎮 Unity
+      - 😢 Emotion
+
   - title: Meta-VisEmo
     image: assets/images/metavisemo/s1.png
     slug: /projects/Meta-VisEmo
     tags:
-      - Metaverse
-      - Emotion
-      - Unity Game Development
-      - Avatar
+      - 😢 Emotion
+      - 🎮 Unity
   - title: AI mirror
     slug: /projects/aimirror
     tags:
-      - Interaction
-      - AI
-      - Data-Visualization
-      - ACM
+      - 🤖 AI
+      - 🎮 Unity
+      - 🎨 Digital Art
+
     image: assets/images/HSY-Portfolio-Export_Page_46.jpg
   - title: Mondrian's Mac
     image: assets/images/mondrainmac/1s.jpg
     slug: /projects/Mondrain
     tags:
-      - Digital Art
-      - Web Design
-      - Mondrian
-      - Art Installation
-      - Unity
+      - 🎨 Digital Art
+      - 🌐 Web Design
+      - 🎮 Unity
 
-ndaDisclaimer: Designing the digial world! Working on more...
+ndaDisclaimer: Designing the digital world! Working on more...
 moreWorksDesc: The following showcases both my freelance projects and those developed for companies.
 
 moreWorks:
-  - title: ffandesign webiste
-    description: Fully customized design studio webiste with CMS integration
+  - title: ffandesign website
+    description: Fully customized design studio website with CMS integration
     url: https://ffandesign.net/
     image: assets/images/ffan.svg
 
@@ -110,16 +106,16 @@ moreWorks:
     image: assets/images/voiseed.jpeg
 
   - title: Notion CMS blog website for client
-    description: Implementing Notion api and Three.js for easy organize the web content and write daily blog.
+    description: Implementing Notion API and Three.js for easy organization of web content and writing daily blogs.
     url: https://antioch.vercel.app/
     image: assets/images/notionblog.jpeg
 
   - title: 3D element generation on web poster editing tool
-    description: Implementing the three.js library in web canvas and letting users have 3d font effects and another animation element on their recommendation poster.
+    description: Implementing the Three.js library in web canvas and allowing users to have 3D font effects and other animation elements on their recommendation poster.
     url: https://www.nolibox.com/
     image: assets/images/nolipix.jpeg
 
   - title: AI*Design Sharing
-    description: Sharing my experience of using AI in design and how to use AI to create a better design.
+    description: Sharing my experience of using AI in design and how to use AI to create better designs.
     url: https://digital-and-interaction-design.framer.ai/
     image: assets/images/aidesign.jpeg

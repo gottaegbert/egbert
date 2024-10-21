@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+.tagFilterContainer {
+  display: flex; /* 使用 Flexbox */
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  align-items: flex-end;
+}
+
+.tagButton {
+  color: #e7e7e7;
+  border: 1px solid #e7e7e7;
+  border-radius: 2px;
+  font-size: 24px;
+  padding: 10px 15px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s;
+
+  @media only screen and (max-width: $breakpoint-sm) {
+    font-size: 14px;
+    padding: 2px 3px;
+    margin: 3px;
+  }
+
+  &:hover {
+    background-color: var(--arrow);
+    color: var(--off-white);
+  }
+}
+
+.active {
+  border: none;
+  color: var(--off-white);
+  background-color: var(--accent-color);
+}

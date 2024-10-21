@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import FloatingLink from '../components/FloatingLink/FloatingLink';
 import StaggeredTitle from '../components/StaggeredTitle/StaggeredTitle';
 import CaseStudy from '../components/CaseStudy/CaseStudy';
+import TagsFilter from '../components/TagsFilter/TagsFilter';
 import Work from '../components/Work/Work';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
@@ -93,9 +94,28 @@ const IndexPage: React.FC<Props> = ({ data }) => {
     moreWorks,
     ndaDisclaimer,
   } = data;
+
+  const [selectedTags, setSelectedTags] = useState<string[]>([]); // 选定的标签
+  const uniqueTags = Array.from(
+    new Set(selectedProjects.flatMap((proj) => proj.tags))
+  ); // 获取唯一标签
+
+  const filteredProjects =
+    selectedTags.length > 0
+      ? selectedProjects.filter((proj) =>
+          proj.tags.some((tag) => selectedTags.includes(tag))
+        )
+      : selectedProjects; // 根据选定的标签过滤项目
+
   const [isLoading, setIsLoading] = useState(true);
   const [showPreloader, setShowPreloader] = useState(true);
+  const onTagSelect = (tags: string[]) => {
+    setSelectedTags(tags); // 更新选定的标签
+  };
 
+  const handleClearAll = () => {
+    onTagSelect([]); // 清空选定的标签
+  };
   useEffect(() => {
     const locomotiveScroll = createLocomotive();
     setTimeout(() => {
@@ -140,7 +160,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
         <AnimatePresence mode="wait">
           {showPreloader && <Preloader setShowPreloader={setShowPreloader} />}
         </AnimatePresence>
-        <Intro></Intro>
+        <Intro />
 
         <section className={cn('grid sectionSpacing', styles.aboutSection)}>
           <div className={styles.heroLinkContainer}>
@@ -162,7 +182,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
         </section>
         <section className={cn('sectionSpacing', styles.selectedWorkContainer)}>
           <div className="grid">
-            <div className={'col-12 '}>
+            <div className={'col-9'}>
               <StaggeredTitle
                 label1="Selected"
                 label2="Projects"
@@ -170,7 +190,24 @@ const IndexPage: React.FC<Props> = ({ data }) => {
               />
             </div>
 
-            {selectedProjects.map((proj, idx: number) => (
+            {/* 添加标签过滤器 */}
+            <div className={'col-10'}>
+              <TagsFilter
+                classname={styles.projTitle}
+                tags={uniqueTags}
+                selectedTags={selectedTags}
+                onTagSelect={setSelectedTags}
+                onClearAll={handleClearAll} // 传递 handleClearAll
+              />
+            </div>
+            <div className={'col-2'}>
+              <div className={styles.clearallContainer}>
+                <button className={styles.clearButton} onClick={handleClearAll}>
+                  🔁
+                </button>
+              </div>
+            </div>
+            {filteredProjects.map((proj, idx: number) => (
               <div
                 key={'proj' + idx}
                 className={cn('col-12 col-sm-4', styles.caseStudyCol, {
