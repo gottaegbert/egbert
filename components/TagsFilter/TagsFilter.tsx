@@ -5,6 +5,7 @@ type TagFilterProps = {
   tags: string[];
   selectedTags: string[];
   onTagSelect: (tags: string[]) => void; // 修改为接收数组
+  onClearAll: () => void; // 接收 onClearAll 函数
   classname?: string;
 };
 
@@ -23,10 +24,6 @@ const TagsFilter: React.FC<TagFilterProps> = ({
     }
   };
 
-  const handleClearAll = () => {
-    onTagSelect([]); // 清空选定的标签
-  };
-
   return (
     <div className={styles.tagFilterContainer}>
       {tags.map((tag) => (
@@ -38,9 +35,6 @@ const TagsFilter: React.FC<TagFilterProps> = ({
           {tag}
         </button>
       ))}
-      <button className={styles.clearButton} onClick={handleClearAll}>
-        Clear All
-      </button>
     </div>
   );
 };

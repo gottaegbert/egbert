@@ -109,7 +109,13 @@ const IndexPage: React.FC<Props> = ({ data }) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [showPreloader, setShowPreloader] = useState(true);
+  const onTagSelect = (tags: string[]) => {
+    setSelectedTags(tags); // 更新选定的标签
+  };
 
+  const handleClearAll = () => {
+    onTagSelect([]); // 清空选定的标签
+  };
   useEffect(() => {
     const locomotiveScroll = createLocomotive();
     setTimeout(() => {
@@ -176,7 +182,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
         </section>
         <section className={cn('sectionSpacing', styles.selectedWorkContainer)}>
           <div className="grid">
-            <div className={'col-12'}>
+            <div className={'col-9'}>
               <StaggeredTitle
                 label1="Selected"
                 label2="Projects"
@@ -185,13 +191,21 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             </div>
 
             {/* 添加标签过滤器 */}
-            <div className={'col-12'}>
+            <div className={'col-10'}>
               <TagsFilter
                 classname={styles.projTitle}
                 tags={uniqueTags}
                 selectedTags={selectedTags}
                 onTagSelect={setSelectedTags}
+                onClearAll={handleClearAll} // 传递 handleClearAll
               />
+            </div>
+            <div className={'col-2'}>
+              <div className={styles.clearallContainer}>
+                <button className={styles.clearButton} onClick={handleClearAll}>
+                  🔁
+                </button>
+              </div>
             </div>
             {filteredProjects.map((proj, idx: number) => (
               <div
