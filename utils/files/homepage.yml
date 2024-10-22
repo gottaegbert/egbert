@@ -1,47 +1,15 @@
 aboutShort: UX Engineer with strong design sensibilities and technical know-how. Experience in Human-computer interaction (HCI), Productivity & Creativity supports, Generative AI, Web Development and Game Design. The goal is to structure the digital world in a way that makes it more accessible, meaningful and enjoyable for everyone.
 selectedProjects:
-  - title: Subline
-    image: assets/images/subline/subline1.png
-    slug: /projects/Subline
-    filter: UX Design
-    tags:
-      - 🔄 UX
-      - 🤖 AI
-
-  - title: VisEar
-    image: assets/images/visear/vis9.jpg
-    slug: /projects/visear
-    filter: Product Design
-    tags:
-      - 🐍 Develop
-      - ⚙️ Hardware
-
-  - title: Moving Olympics
-    slug: /projects/movingolimipic
-    tags:
-      - 🎮 Unity
-      - 📈 Data Visualization
-      - 🤖 AI
-      - 🐍 Develop
-
-    image: assets/images/HSY-Portfolio-Export_Page_40.jpg
-  - title: Away from school
-    image: assets/images/HSY-Portfolio-Export_Page_32.jpg
-    slug: /projects/weibo
-    tags:
-      - 🐍 Develop
-      - 🌐 Web Design
-      - 📈 Data Visualization
-
   - title: Knoise
     image: assets/images/knoise/1.png
     slug: /projects/Knoise
     filter: UX Design
     tags:
       - 🔄 UX
-      - 📈 Data Visualization
+      - 📈 Data
       - 🌐 Web Design
       - ⚙️ Hardware
+
   - title: InViso
     image: assets/images/Inviso/s1.png
     slug: /projects/InViso
@@ -50,8 +18,8 @@ selectedProjects:
       - 🔄 UX
       - 🐍 Develop
       - 🤖 AI
-      - 🌐 Web Design
-      - 📈 Data Visualization
+      - 📈 Data
+
   - title: Weibo Trending
     image: assets/images/weibotrend/01.jpg
     slug: /projects/weibotrend
@@ -59,7 +27,50 @@ selectedProjects:
       - 🐍 Develop
       - 😢 Emotion
       - 🌐 Web Design
-      - 📈 Data Visualization
+      - 📈 Data
+
+  - title: Moving Olympics
+    slug: /projects/movingolimipic
+    image: assets/images/HSY-Portfolio-Export_Page_40.jpg
+    tags:
+      - 🎮 Unity
+      - 📈 Data
+      - 🤖 AI
+      - 🐍 Develop
+
+  - title: Mondrian's Mac
+    image: assets/images/mondrainmac/1s.jpg
+    slug: /projects/Mondrain
+    tags:
+      - 🎨 Digital Art
+      - 🌐 Web Design
+      - 🎮 Unity
+  - title: AI mirror
+    slug: /projects/aimirror
+    image: assets/images/HSY-Portfolio-Export_Page_46.jpg
+    tags:
+      - 🤖 AI
+      - 🎮 Unity
+      - 🎨 Digital Art
+      - 😢 Emotion
+
+  - title: VisEar
+    image: assets/images/visear/vis9.jpg
+    slug: /projects/visear
+    filter: Product Design
+    tags:
+      - 🐍 Develop
+      - ⚙️ Hardware
+      - 📈 Data
+
+  - title: Away from school
+    image: assets/images/HSY-Portfolio-Export_Page_32.jpg
+    slug: /projects/weibo
+    tags:
+      - 📈 Data
+      - 😢 Emotion
+      - 🌐 Web Design
+
   - title: Tillit
     image: assets/images/trusttillit/01.png
     slug: /projects/tillit
@@ -73,23 +84,17 @@ selectedProjects:
     image: assets/images/metavisemo/s1.png
     slug: /projects/Meta-VisEmo
     tags:
+      - 🎮 Unity
       - 😢 Emotion
-      - 🎮 Unity
-  - title: AI mirror
-    slug: /projects/aimirror
-    tags:
-      - 🤖 AI
-      - 🎮 Unity
-      - 🎨 Digital Art
 
-    image: assets/images/HSY-Portfolio-Export_Page_46.jpg
-  - title: Mondrian's Mac
-    image: assets/images/mondrainmac/1s.jpg
-    slug: /projects/Mondrain
+  - title: Subline
+    image: assets/images/subline/subline1.png
+    slug: /projects/Subline
+    filter: UX Design
     tags:
-      - 🎨 Digital Art
-      - 🌐 Web Design
-      - 🎮 Unity
+      - 🔄 UX
+      - 🤖 AI
+      - ⚙️ Hardware
 
 ndaDisclaimer: Designing the digital world! Working on more...
 moreWorksDesc: The following showcases both my freelance projects and those developed for companies.
