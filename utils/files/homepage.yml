@@ -7,7 +7,6 @@ selectedProjects:
     tags:
       - 🔄 UX
       - 📈 Data
-      - 🌐 Web Design
       - ⚙️ Hardware
 
   - title: InViso
@@ -16,7 +15,6 @@ selectedProjects:
     filter: UX Design
     tags:
       - 🔄 UX
-      - 🐍 Develop
       - 🤖 AI
       - 📈 Data
 
@@ -24,7 +22,6 @@ selectedProjects:
     image: assets/images/weibotrend/01.jpg
     slug: /projects/weibotrend
     tags:
-      - 🐍 Develop
       - 😢 Emotion
       - 🌐 Web Design
       - 📈 Data
@@ -36,7 +33,6 @@ selectedProjects:
       - 🎮 Unity
       - 📈 Data
       - 🤖 AI
-      - 🐍 Develop
 
   - title: Mondrian's Mac
     image: assets/images/mondrainmac/1s.jpg
@@ -52,14 +48,12 @@ selectedProjects:
       - 🤖 AI
       - 🎮 Unity
       - 🎨 Digital Art
-      - 😢 Emotion
 
   - title: VisEar
     image: assets/images/visear/vis9.jpg
     slug: /projects/visear
     filter: Product Design
     tags:
-      - 🐍 Develop
       - ⚙️ Hardware
       - 📈 Data
 
@@ -110,7 +104,7 @@ moreWorks:
     url: https://www.voiseed.com/
     image: assets/images/voiseed.jpeg
 
-  - title: Notion CMS blog website for client
+  - title: Notion CMS blog website
     description: Implementing Notion API and Three.js for easy organization of web content and writing daily blogs.
     url: https://antioch.vercel.app/
     image: assets/images/notionblog.jpeg
@@ -120,7 +114,12 @@ moreWorks:
     url: https://www.nolibox.com/
     image: assets/images/nolipix.jpeg
 
-  - title: AI*Design Sharing
-    description: Sharing my experience of using AI in design and how to use AI to create better designs.
-    url: https://digital-and-interaction-design.framer.ai/
-    image: assets/images/aidesign.jpeg
+  - title: Revoiceit website
+    description: Low code platform Framer website design and development
+    url: https://voiseed-dev.voiseed.com/Revoiceit
+    image: assets/images/revoiceit.jpeg
+
+  # - title: AI*Design Sharing
+  #   description: Sharing my experience of using AI in design and how to use AI to create better designs.
+  #   url: https://digital-and-interaction-design.framer.ai/
+  #   image: assets/images/aidesign.jpeg
