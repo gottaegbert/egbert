@@ -10,19 +10,20 @@ const Navigation = () => {
   // add type argument
 
   const navigation = React.createRef<HTMLDivElement>();
-  const [darkTheme, setDarkTheme] = useState(undefined);
-  const handleToggle = (event: { target: { checked: any } }) => {
+  const [darkTheme, setDarkTheme] = useState<boolean | null>(null);
+
+  const handleToggle = (event: { target: { checked: boolean } }) => {
     setDarkTheme(event.target.checked);
   };
 
   useEffect(() => {
-    if (darkTheme !== undefined) {
+    if (darkTheme !== null) {
       if (darkTheme) {
         document.documentElement.setAttribute('data-theme', 'dark');
         window.localStorage.setItem('theme', 'dark');
       } else {
         document.documentElement.removeAttribute('data-theme');
-        window.localStorage.setItem('theme', 'dark');
+        window.localStorage.setItem('theme', 'light');
       }
     }
   }, [darkTheme]);
@@ -61,7 +62,11 @@ const Navigation = () => {
 
       <div className={styles.switchinfo}>
         <label className={styles.switch}>
-          <input type="checkbox" checked={darkTheme} onChange={handleToggle} />
+          <input
+            type="checkbox"
+            checked={darkTheme === true}
+            onChange={handleToggle}
+          />
           <div className={styles.planet}></div>
         </label>
       </div>
